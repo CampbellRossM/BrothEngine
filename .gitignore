@@ -351,3 +351,13 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Why the fuck are these not included in this
+*.sln
+*.csproj
+
+# Folders that aren't code
+BrothEngine/Properties/
+BrothUnitTestProject/
+packages/
+TestResults/
