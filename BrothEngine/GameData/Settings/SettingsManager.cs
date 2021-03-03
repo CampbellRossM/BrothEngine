@@ -2,26 +2,6 @@
 
 namespace Broth.GameData.Settings
 {
-    /* Getting rid of this file
-
-    /// <summary>
-    /// Config Settings are the only settings that are loaded before the game window is created.
-    /// If no config file is found, the default settings will be used to create a new one.
-    /// </summary>
-    public class ConfigSettings
-    {
-        // Window Definition
-        public string Title { get; set; } = "BrothEngine"; //TODO: Title can be set later. Maybe this shouldn't be in config.
-        public uint Width { get; set; } = 800;
-        public uint Height { get; set; } = 600;
-        public uint TargetFPS { get; set; } = 60;
-        public bool Fullscreen { get; set; } = false;
-
-        public string ResourcesFolder { get; set; } = "Resources";
-    }
-
-    */
-
     /// <summary>
     /// Contains references to all settings that can be manipulated by a user both in game and in files.
     /// </summary>

@@ -48,15 +48,6 @@ namespace Broth.GameStates
             };
             entity.Renderer = renderer;
             entity.Transform.Position = new Vector2f(game.Window.Size.X / 2, game.Window.Size.Y / 2);
-            /*
-            ImageRenderer renderer = new ImageRenderer(entity);
-            ImageResource resource = new ImageResource("noID", null);
-            resource.Filepath = @"BrothEngine\logo.png";
-            resource.Load();
-            resource.Image.Origin = new Vector2f(resource.Image.TextureRect.Width / 2, resource.Image.TextureRect.Height / 2);
-            renderer.Resource = resource;
-            entity.Renderer = renderer;
-            */
         }
 
         public override void Update(Game game, GameTime gameTime)
