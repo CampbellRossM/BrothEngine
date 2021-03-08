@@ -10,7 +10,7 @@ namespace Broth.IO
     /// A class to help find subclasses for json deserialization.
     /// </summary>
     /// <typeparam name="TBaseObject"> The base type that all objects deserialized must inherit. </typeparam>
-    class JsonPolymorphicDeserializerDictionary<TBaseObject>
+    public class JsonPolymorphicDeserializer<TBaseObject>
     {
         private readonly Dictionary<string, Func<string, TBaseObject>> deserializerLookup = new Dictionary<string, Func<string, TBaseObject>>();
 
