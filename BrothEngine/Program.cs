@@ -1,4 +1,6 @@
-﻿namespace Broth
+﻿using Broth.Engine;
+
+namespace Broth
 {
     class Program
     {
