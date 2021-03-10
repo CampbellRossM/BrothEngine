@@ -52,9 +52,9 @@ namespace Broth.Engine.IO
             return JsonDocument.Parse(jString, documentOptions);
         }
 
-        public static JsonDocument GetJsonDocumentFromFile(string absoulteFilepath)
+        public static JsonDocument GetJsonDocumentFromFile(string absoluteFilepath)
         {
-            using (StreamReader reader = new StreamReader(absoulteFilepath))
+            using (StreamReader reader = new StreamReader(absoluteFilepath))
             {
                 string jString = reader.ReadToEnd();
                 return GetJsonDocument(jString);

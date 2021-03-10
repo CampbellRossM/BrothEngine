@@ -40,7 +40,10 @@ namespace Broth.Engine.GameStates
 
             entity = new Entity();
 
-            ResourceFactory.RegisterResourceFromFile(@"BrothEngine\resource.json", game.Resources);
+            game.Resources.RegisterResource(
+                game.Resources.ResourceDeserializer.Deserialize(
+                    new ScriptDocument(FileFinder.ResourcePath("BrothEngine/resource.json")).JString
+                    ));
 
             ImageRenderer renderer = new ImageRenderer(entity)
             {

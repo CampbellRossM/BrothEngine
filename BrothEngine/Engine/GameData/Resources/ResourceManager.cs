@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+
+using Broth.Engine.IO;
 using Broth.Engine.Util;
 
 namespace Broth.Engine.GameData.Resources
@@ -7,6 +9,17 @@ namespace Broth.Engine.GameData.Resources
     public class ResourceManager
     {
         private readonly Dictionary<string, Resource> resourceRegistry = new Dictionary<string, Resource>();
+
+        public readonly JsonPolymorphicDeserializer<Resource> ResourceDeserializer = new JsonPolymorphicDeserializer<Resource>();
+
+        public ResourceManager(bool registerDefaultDeserializers = true)
+        {
+            if (registerDefaultDeserializers)
+            {
+                ResourceDeserializer.RegisterType("image", JsonManager.DeserializeObject<GraphicsResources.ImageResource>);
+                ResourceDeserializer.RegisterType("font", JsonManager.DeserializeObject<FontResource>);
+            }
+        }
 
         public TResource TryGetResource<TResource>(string id) where TResource : Resource
         {
@@ -33,6 +46,5 @@ namespace Broth.Engine.GameData.Resources
                 Debug.Warning("Resource ID conflict.\n" +
                     "Attempted to register " + resource.ID + " but that ID is already in use.");
         }
-
     }
 }

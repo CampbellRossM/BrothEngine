@@ -23,7 +23,7 @@ namespace Broth.Engine.IO
         /// </summary>
         /// <param name="typeString"> The value that the Type Property in JSON should be to use this deserializer. </param>
         /// <param name="deserializer"> A function that takes a json string and returns the deserialized object. </param>
-        /// <returns></returns>
+        /// <returns> True if successful. </returns>
         public bool RegisterType(string typeString, Func<string, TBaseObject> deserializer)
         {
             if (deserializerLookup.TryAdd(typeString, deserializer))

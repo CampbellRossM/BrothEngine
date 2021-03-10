@@ -37,7 +37,6 @@ namespace Broth.Engine
         {
             Settings.RegisterCommonSettings();
             InputHandler.RegisterCommonBindings();
-            ResourceFactory.RegisterCommonResourceTypes();
 
             Window = GameWindow.CreateGameWindow(this);
 
