@@ -30,11 +30,11 @@ namespace Broth.Engine.Rendering
             };
             Resized += (sender, args) =>
             {
-                if (game.Settings.GetSetting("ENGINE::Fullscreen").GetBool()) return;
+                if (game.Settings.GetSetting("ENGINE.Fullscreen").GetBool()) return;
 
                 RenderWindow window = (RenderWindow)sender;
-                game.Settings.GetSetting("ENGINE::WindowWidth").Set((int)args.Width);
-                game.Settings.GetSetting("ENGINE::WindowHeight").Set((int)args.Height);
+                game.Settings.GetSetting("ENGINE.WindowWidth").Set((int)args.Width);
+                game.Settings.GetSetting("ENGINE.WindowHeight").Set((int)args.Height);
                 window.SetView(new View(new FloatRect(0, 0, args.Width, args.Height)));
             };
 
@@ -53,7 +53,7 @@ namespace Broth.Engine.Rendering
             VideoMode videoMode;
             Styles style;
 
-            if (game.Settings.GetSetting("ENGINE::Fullscreen").GetBool())
+            if (game.Settings.GetSetting("ENGINE.Fullscreen").GetBool())
             {
                 videoMode = VideoMode.FullscreenModes[0];
                 style = Styles.Fullscreen;
@@ -61,8 +61,8 @@ namespace Broth.Engine.Rendering
             else
             {
                 videoMode = new VideoMode(
-                    (uint)game.Settings.GetSetting("ENGINE::WindowWidth").GetInt(),
-                    (uint)game.Settings.GetSetting("ENGINE::WindowHeight").GetInt()
+                    (uint)game.Settings.GetSetting("ENGINE.WindowWidth").GetInt(),
+                    (uint)game.Settings.GetSetting("ENGINE.WindowHeight").GetInt()
                     );
                 style = Styles.Default;
             }
@@ -70,7 +70,7 @@ namespace Broth.Engine.Rendering
             GameWindow window = new GameWindow(videoMode, game.Title, style);
 
             // WARNING: If the internet finds out you are using a Sleep() based method to set framerate, you will get yelled at
-            window.SetFramerateLimit((uint)game.Settings.GetSetting("ENGINE::TargetFPS").GetInt());
+            window.SetFramerateLimit((uint)game.Settings.GetSetting("ENGINE.TargetFPS").GetInt());
             window.AttachEventDelegates(game);
             window.SetActive();
 
@@ -87,8 +87,8 @@ namespace Broth.Engine.Rendering
             game.QueueAction(
                     () =>
                     {
-                        game.Settings.GetSetting("ENGINE::Fullscreen").Set(
-                            !game.Settings.GetSetting("ENGINE::Fullscreen").GetBool()
+                        game.Settings.GetSetting("ENGINE.Fullscreen").Set(
+                            !game.Settings.GetSetting("ENGINE.Fullscreen").GetBool()
                             );
                         game.Window = CreateGameWindow(game);
 

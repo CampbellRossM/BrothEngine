@@ -25,25 +25,25 @@ namespace Broth.Engine.GameData.Settings
         {
             RegisterSetting(new IntSetting()
             {
-                ID = "ENGINE::WindowWidth",
+                ID = "ENGINE.WindowWidth",
                 Name = "Window Width",
                 Default = 800
             });
             RegisterSetting(new IntSetting()
             {
-                ID = "ENGINE::WindowHeight",
+                ID = "ENGINE.WindowHeight",
                 Name = "Window Height",
                 Default = 600
             });
             RegisterSetting(new IntSetting()
             {
-                ID = "ENGINE::TargetFPS",
+                ID = "ENGINE.TargetFPS",
                 Name = "Target FPS",
                 Default = 60
             });
             RegisterSetting(new BoolSetting()
             {
-                ID = "ENGINE::Fullscreen",
+                ID = "ENGINE.Fullscreen",
                 Name = "Fullscreen",
                 Default = false
             });

@@ -1,6 +1,6 @@
 {
 	"Type": "font",
-	"ID": "ENGINE::font",
+	"ID": "ENGINE.font",
 	"Filepath": "BrothEngine/font/OpenSans-Regular.ttf",
 	"License": "Apache License, Version 2.0"
 }

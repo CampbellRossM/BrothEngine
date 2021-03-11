@@ -78,7 +78,7 @@ namespace Broth.Engine
         {
             // TODO: TargetFPS and fixed time step are currently used interchangeably.
 
-            GameTime gameTime = new GameTime((uint)Settings.GetSetting("ENGINE::TargetFPS").GetInt());
+            GameTime gameTime = new GameTime((uint)Settings.GetSetting("ENGINE.TargetFPS").GetInt());
 
             while(Window.IsOpen)
             {

@@ -47,7 +47,7 @@ namespace Broth.Engine.GameStates
 
             ImageRenderer renderer = new ImageRenderer(entity)
             {
-                Resource = game.Resources.TryGetResource<ImageResource>("ENGINE::logo")
+                Resource = game.Resources.TryGetResource<ImageResource>("ENGINE.logo")
             };
             entity.Renderer = renderer;
             entity.Transform.Position = new Vector2f(game.Window.Size.X / 2, game.Window.Size.Y / 2);

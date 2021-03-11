@@ -1,6 +1,6 @@
 {
 	"Type": "image",
-	"ID": "ENGINE::logo",
+	"ID": "ENGINE.logo",
 	"Filepath": "BrothEngine/logo.png",
 	"Origin": "CENTER"
 }
